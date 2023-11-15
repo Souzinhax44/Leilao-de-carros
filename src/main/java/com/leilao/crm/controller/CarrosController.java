@@ -1,5 +1,6 @@
 package com.leilao.crm.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,8 @@ public class CarrosController {
     @ResponseStatus(HttpStatus.CREATED)
     public Carros adicionar(@RequestBody Carros carros) {
         try {
+            validarAno(carros.getAno());
+            validarValor(carros.getValor());
             return carrosRepository.save(carros);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Erro ao adicionar carro", e);
@@ -49,6 +52,8 @@ public class CarrosController {
     @PutMapping("/{id}")
     public Carros atualizar(@PathVariable Long id, @RequestBody Carros carrosAtualizado) {
         try {
+            validarAno(carrosAtualizado.getAno());
+            validarValor(carrosAtualizado.getValor());
             return carrosRepository.findById(id).map(carro -> {
                 carro.setModelo(carrosAtualizado.getModelo());
                 carro.setAno(carrosAtualizado.getAno());
@@ -71,6 +76,20 @@ public class CarrosController {
             );
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Erro ao deletar carro", e);
+        }
+    }
+
+    // Método de validação para o ano
+    private void validarAno(int ano) {
+        if (ano < 1807 || ano > 9999) {
+            throw new IllegalArgumentException("Ano inválido. Deve ser entre 1807 e 9999.");
+        }
+    }
+
+    // Método de validação para o valor
+    private void validarValor(BigDecimal valor) {
+        if (valor == null || valor.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("Valor inválido. Deve ser acima de zero.");
         }
     }
 }
