@@ -34,6 +34,8 @@ public class CarrosController {
             validarAno(carros.getAno());
             validarValor(carros.getValor());
             return carrosRepository.save(carros);
+        } catch (IllegalArgumentException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Erro ao adicionar carro", e);
         }
@@ -61,6 +63,8 @@ public class CarrosController {
                 carro.setEstado(carrosAtualizado.getEstado());
                 return carrosRepository.save(carro);
             }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Carro não encontrado com o ID: " + id));
+        } catch (IllegalArgumentException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Erro ao atualizar carro", e);
         }
@@ -81,8 +85,8 @@ public class CarrosController {
 
     // Método de validação para o ano
     private void validarAno(int ano) {
-        if (ano < 1807 || ano > 9999) {
-            throw new IllegalArgumentException("Ano inválido. Deve ser entre 1807 e 9999.");
+        if (ano < 1807 || ano > 2025) {
+            throw new IllegalArgumentException("Ano inválido. Deve ser entre 1807 e 2025.");
         }
     }
 
