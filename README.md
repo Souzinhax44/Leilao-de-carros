@@ -6,11 +6,13 @@
 
 Este projeto foi desenvolvido na <a href="https://www.usf.edu.br">Universidade São Franscisco</a> durante o 6º semestre de Engenharia da Computção na matéria de Programação Orientada a Objetos lecionada pelo <a href="https://github.com/matiasfilho81">Prof. José Matias Lemes Filho</a>. O projeto tem o intuito de realizar uma aplicação backend utilizando as operações "CRUD". O programa tem o objetivo de permitir o controle de dados dentro de um leilão de carros, tendo informações essencias como: modelo, ano, estado e valor. 
 
-## Sobre o Projeto
+<br>
 
+<h2 align="left">Como funciona?</h2>
 
+[![Assista ao vídeo](https://miro.medium.com/v2/resize:fit:1400/1*vFiGOTV1S8yz0RTIQteTjw.png)](https://youtu.be/gu3DswypFjA)
 
-![Screenshot](./screenshots/screenshot.png)
+<br>
 
 ## Tecnologias Utilizadas
 
