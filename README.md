@@ -4,7 +4,7 @@
 </p>
 <h2 align="left"> 📝 Descrição </h2>
 
-Este projeto foi desenvolvido na <a href="https://www.usf.edu.br">Universidade São Franscisco</a> durante o 6º semestre de Engenharia da Computção na matéria de Programação Orientada a Objetos lecionada pelo <a href="https://github.com/matiasfilho81">Prof. José Matias Lemes Filho</a>. O projeto tem o intuito de realizar uma aplicação backend utilizando as operações "CRUD". O programa tem o objetivo de permitir o controle de dados dentro de um leilão de carros, tendo informações essencias como: modelo, ano, estado e valor. 
+Este projeto foi desenvolvido na <a href="https://www.usf.edu.br">Universidade São Franscisco</a> durante o 6º semestre de Engenharia da Computção na matéria de Programação Orientada a Objetos lecionada pelo <a href="https://github.com/matiasfilho81">Prof. José Matias Lemes Filho</a>. O projeto tem o intuito de realizar uma aplicação backend utilizando as operações "CRUD". O programa tem o objetivo de permitir o controle de dados dentro de um leilão de carros, permitindo com que a posse e venda de carros seja facilitada e de modo pratico, tendo informações essencias como: modelo, ano, estado e valor.
 
 <br>
 
@@ -93,14 +93,14 @@ Este projeto foi desenvolvido na <a href="https://www.usf.edu.br">Universidade S
 
 <br>
 
-<h2 align="left">📁 Acesso ao projeto </h2>
+<h2 align="left"> Acesso ao projeto </h2>
 
 - Clonar o Repositório <br>
   `git clone https://github.com/Souzinhax44/Leilao-de-carros.git`
 
 <br>
 
-<h2 align="left">🖌️ Autores </h2>
+<h2 align="left"> Autores </h2>
 
 [<img loading="lazy" src="https://avatars.githubusercontent.com/u/146894035?v=4" width=115><br><sub>Pedro H. de Souza<br>RA: 202102523</sub>](https://github.com/Souzinhax44)
 
